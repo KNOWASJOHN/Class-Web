@@ -48,4 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
             contentWrapper.classList.remove('blur');
         }
     });
+
+    // Swipe left to close side panel for smartphones
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchEndX < touchStartX && sidePanel.classList.contains('open')) {
+            sidePanel.classList.remove('open');
+            contentWrapper.classList.remove('blur');
+        }
+    });
 });
