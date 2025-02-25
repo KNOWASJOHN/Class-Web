@@ -115,7 +115,13 @@ main {
     }
 }
 
-/* Responsive Design */
+.card-image {
+    width: 40%; /* Set width to 40% of original size */
+    height: auto;
+    border-radius: 15px 15px 0 0; /* Match the card's border radius */
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 768px) {
     .logo h1 {
         font-size: 2rem; /* Adjust font size for mobile resolutions */
@@ -144,6 +150,10 @@ main {
 
     .cards-container {
         align-items: center; /* Center cards container for mobile resolutions */
+    }
+
+    .card-image {
+        width: 80%; /* Adjust width for mobile resolutions */
     }
 }
 
@@ -189,6 +199,10 @@ main {
 
     .cards-container {
         align-items: center; /* Center cards container for mobile resolutions */
+    }
+
+    .card-image {
+        width: 70%; /* Further adjust width for smaller screens */
     }
 }
 
