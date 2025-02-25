@@ -53,6 +53,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     color: #000000; /* Black text color */
+    flex-wrap: nowrap; /* Single row */
 }
 
 .nav-btn {
@@ -87,6 +88,7 @@ main {
 }
 
 .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
     background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
     padding: 3rem;
     border-radius: 15px;
@@ -101,7 +103,6 @@ main {
 .card:hover {
     transform: translateY(-10px) scale(1.05); /* Pop effect */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
 }
 
 @keyframes pop-up {
@@ -136,8 +137,15 @@ main {
     }
 
     .nav-links {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Allow wrapping */
         justify-content: center;
+    }
+
+    .nav-btn {
+        flex: 4 4 15%; /* 2 elements in one row */
+        margin: 0.2rem;
+        padding: 0.2rem 1rem; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
     }
 
     .card {
@@ -168,12 +176,15 @@ main {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center;
     }
 
     .nav-btn {
-        width: 100%;
-        text-align: center;
+        flex: 4 4 15%; /* 2 elements in one row */
+        margin: 0.2rem;
+        padding: 0.5rem; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller font size */
     }
 
     .side-panel {
@@ -227,7 +238,7 @@ main {
 }
 
 .content-wrapper {
-    transition: filter 0.3s ease;
+    transition: filter 0.5s ease;
 }
 
 .content-wrapper.blur {
@@ -332,7 +343,7 @@ main {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
 }
 
 .close-panel-btn:hover {
@@ -341,7 +352,7 @@ main {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .fade-in.visible {
