@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
-    <title>Data Science</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Hello</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Tharavaad</title>
+        <link rel="stylesheet" href="flex.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <h1>Data Tharavaad</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-btn">Home</a>
+                <a href="#" class="nav-btn">About</a>
+                <a href="#" class="nav-btn">Services</a>
+                <a href="#" class="nav-btn">Contact</a>
+            </div>
+        </nav>
+
+        <button id="menu-btn" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="side-panel" id="side-panel">
+            <button class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="panel-content">
+                <h2>Additional Pages</h2>
+                <ul>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <main>
+                <div class="cards-container">
+                    <div class="card">
+                        <i class="fas fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Custom web solutions tailored to your needs</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>App Development</h2>
+                        <p>Mobile applications for iOS and Android</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-database"></i>
+                        <h2>Data Analytics</h2>
+                        <p>Transform your data into insights</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-cloud"></i>
+                        <h2>Cloud Services</h2>
+                        <p>Scalable cloud solutions for your business</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
