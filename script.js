@@ -67,4 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
             contentWrapper.classList.remove('blur');
         }
     });
+
+    // Fade-in animation 1 second after opening the website
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    setTimeout(() => {
+        fadeInElements.forEach(element => {
+            element.classList.add('visible');
+        });
+    }, 1000);
+
+    // Fade-in animation on scroll down
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) { // Only apply fade-in when scrolling down
+            fadeInElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0 && !element.classList.contains('visible')) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
 });

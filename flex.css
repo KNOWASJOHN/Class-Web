@@ -305,3 +305,12 @@ main {
 .close-panel-btn:hover {
     background-color: #e0a800;
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
