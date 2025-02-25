@@ -32,4 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
             sidePanel.style.width = '400px';
         }
     });
+
+    // Swipe left to close side panel
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sidePanel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    sidePanel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchEndX < touchStartX) {
+            sidePanel.classList.remove('open');
+            contentWrapper.classList.remove('blur');
+        }
+    });
 });
