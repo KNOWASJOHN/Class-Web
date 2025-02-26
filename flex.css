@@ -21,9 +21,10 @@ body::before {
     width: 100%;
     height: 100%;
     background: url('https://wallpapershome.com/images/pages/pic_h/26080.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size:cover;
     filter: blur(5px); /* Added blur effect */
     z-index: -1;
+    background-attachment: fixed; /* Prevent background from moving when scrolling */
 }
 
 nav {
@@ -165,10 +166,20 @@ main {
     .card-image {
         width: 80%; /* Adjust width for mobile resolutions */
     }
-
     .menu-btn {
         background: transparent; /* Make menu button transparent */
-    }
+        position: fixed;
+        border: none;
+        color: #000000; /* Light color */
+        padding: 15px; /* Adjust padding for mobile screens */
+        font-size: 1rem; /* Adjust font size for mobile screens */
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 100;
+        background: transparent;
+        transition: background-color 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
 }
 
@@ -249,6 +260,7 @@ main {
         font-size: 0.8rem; /* Reduce paragraph size for small screens */
     }
 
+
 }
 
 .content-wrapper {
@@ -260,6 +272,7 @@ main {
 }
 
 .menu-btn {
+    
     position: fixed;
     top: 3.3rem; /* Lifted from 3rem to 2rem */
     left: 1rem; /* Adjusted from 2rem to 1rem */
