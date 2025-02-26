@@ -123,6 +123,7 @@ main {
 }
 
 @media (max-width: 768px) {
+    
     .logo img {
         width: 160px; /* Adjust width */
         height: auto; /* Maintain aspect ratio */
@@ -165,6 +166,9 @@ main {
         width: 80%; /* Adjust width for mobile resolutions */
     }
 
+    .menu-btn {
+        background: transparent; /* Make menu button transparent */
+    }
 
 }
 
@@ -221,6 +225,7 @@ main {
     .card-image {
         width: 70%; /* Further adjust width for smaller screens */
     }
+    
 
 
 }
@@ -243,6 +248,7 @@ main {
     .card p {
         font-size: 0.8rem; /* Reduce paragraph size for small screens */
     }
+
 }
 
 .content-wrapper {
@@ -255,7 +261,7 @@ main {
 
 .menu-btn {
     position: fixed;
-    top: 3.5rem; /* Lifted from 3rem to 2rem */
+    top: 3.3rem; /* Lifted from 3rem to 2rem */
     left: 1rem; /* Adjusted from 2rem to 1rem */
     border: none;
     color: #000000; /* Light color */
@@ -264,6 +270,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     z-index: 100;
+    background: transparent;
     transition: background-color 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
