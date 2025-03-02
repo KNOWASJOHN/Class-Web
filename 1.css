@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+body {
+    background-color: #232323;
+    margin: 0;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    font-size: 23px; /* Added line to increase font size */
+}
+
+#background-video {
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Added to ensure video covers the screen */
+    transform: translate(50%, 50%); /* Added to center the video */
+    /* Added to resize the background with resolution */
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3; /* Added to change the opacity of the background video */
+    filter: blur(1px);
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.menu {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; /* Changed color of menu button */
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    font-size: 30px; /* Adjusted font size for three dots */
+}
+
+.menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #232323;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added drop shadow */
+}
+
+.menu-list li {
+    margin: 0;
+}
+
+.menu-list li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.menu-list li a:hover {
+    background-color: #ffc229;
+    color: #232323;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    transition: backdrop-filter 0.3s ease; /* Added smooth blur animation */
+}
+
+.overlay.active {
+    display: block;
+    backdrop-filter: blur(2px); /* Increased blur effect */
+}
+
+.top-right-links {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    filter: drop-shadow(0 0px 9px rgb(255, 255, 255)); /* Added drop shadow effect */
+    filter: drop-shadow(0 0px 9px rgba(255, 255, 255, 0.678)); /* Added drop shadow */
+}
+
+.top-right-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.top-right-links a:hover {
+    text-decoration: underline;
+    color: #ffc229; /* Added line to change text color on hover */
+}
+
+
+.center-top-text {
+    display: none; /* Hide the center-top-text class */
+}
+.center-top-logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100px;
+    height: auto;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)); /* Added drop shadow */
+}
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.instagram-container iframe {
+    width: 50%; /* Make iframe width responsive */
+    height:60%; /* Make iframe height responsive */
+    max-width: 600px;
+    max-height: 600px;
+    border: none;
+    border-radius: 10px; /* Added round corners */
+    filter: drop-shadow(0 0px 8px rgba(255, 255, 255, 0.555)); /* Added drop shadow */
+}
+
+@media (max-width: 600px) {
+    .center-top-logo {
+        max-width: 70px; /* Adjust size for smaller screens */
+    }
+    .instagram-container iframe {
+        width: 90%; /* Make iframe width responsive */
+        height:50%; /* Make iframe height responsive */
+    }
+}
+
+@media (max-width: 900px) {
+    #background-video {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100vw;
+        height: 100vh;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+        width: 100%;
+        height: auto;
+    }
+
+    .top-right-links {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        text-align: right;
+        font-size: 15px;
+    }
+
+    .top-right-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
