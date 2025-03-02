@@ -43,15 +43,11 @@ body {
     cursor: pointer;
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 30px; /* Adjusted font size for three dots */
+    filter: drop-shadow(0 0px 9px rgba(255, 255, 255, 0.993)); /* Added drop shadow */
 }
 .menu-button:hover {
-    background-color: transparent;
-    border: none;
     color: #ffc229; /* Changed color of menu button */
-    padding: 10px;
-    cursor: pointer;
-    font-family: 'Silkscreen', Arial, sans-serif;
-    font-size: 30px; /* Adjusted font size for three dots */
+    filter: drop-shadow(0 0px 9px #ffc229b9); /* Added drop shadow effect */
 }
 .menu-list {
     display: none;
@@ -82,6 +78,7 @@ body {
 
 .menu-list li a:hover {
     background-color: #ffc229;
+    filter: drop-shadow(0 0px 6px #ffc22949); /* Added drop shadow effect */
     color: #232323;
 }
 
@@ -107,20 +104,20 @@ body {
     position: absolute;
     top: 30px;
     right: 30px;
-    filter: drop-shadow(0 0px 9px rgb(255, 255, 255)); /* Added drop shadow effect */
-    filter: drop-shadow(0 0px 9px rgba(255, 255, 255, 0.678)); /* Added drop shadow */
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .top-right-links a {
     color: white;
     text-decoration: none;
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.808)); /* Added drop shadow effect */
     margin-left: 15px;
 }
 
 .top-right-links a:hover {
     text-decoration: underline;
     color: #ffc229; /* Added line to change text color on hover */
+    filter: drop-shadow(0 0px 6px #ffc2299f); /* Added drop shadow effect */
 }
 
 .center-top-text {
@@ -161,14 +158,16 @@ body {
     width: 100%;
     text-align: center;
     font-family: 'Silkscreen', Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.699);
-    font-size: 10px;
+    color: rgba(255, 255, 255, 0.863);
+    font-size: 13px;
     transition: color 0.3s ease; /* Added transition for smooth color change */
     z-index: 2;
+    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.384)); /* Added drop shadow */
 }
 
 .footer-text:hover {
     color: #ffc229; /* Change color on hover */
+    filter: drop-shadow(0 0px 5px #ffc22946); /* Added drop shadow */
 }
 
 @media (max-width: 600px) {
