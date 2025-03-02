@@ -167,7 +167,7 @@ body {
 
 .footer-text:hover {
     color: #ffc229; /* Change color on hover */
-    filter: drop-shadow(0 0px 5px #ffc22946); /* Added drop shadow */
+    filter: drop-shadow(0 0px 4px rgba(255, 194, 41, 0.452)); /* Added drop shadow */
 }
 
 @media (max-width: 600px) {
