@@ -180,3 +180,10 @@ body {
         margin: 10px 0;
     }
 }
+
+@media (max-height: 600px) {
+    .instagram-container iframe {
+        width: 90%; /* Make iframe width responsive */
+        height: 50%; /* Make iframe height responsive */
+    }
+}
