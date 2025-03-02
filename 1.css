@@ -98,6 +98,7 @@ body {
     right: 30px;
     filter: drop-shadow(0 0px 9px rgb(255, 255, 255)); /* Added drop shadow effect */
     filter: drop-shadow(0 0px 9px rgba(255, 255, 255, 0.678)); /* Added drop shadow */
+    font-size: 18px;
 }
 
 .top-right-links a {
