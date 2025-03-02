@@ -44,29 +44,40 @@ body {
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 30px; /* Adjusted font size for three dots */
 }
-
+.menu-button:hover {
+    background-color: transparent;
+    border: none;
+    color: #ffc229; /* Changed color of menu button */
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    font-size: 30px; /* Adjusted font size for three dots */
+}
 .menu-list {
     display: none;
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    background-color: #232323;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2323236c;
     position: absolute;
-    top: 40px;
-    left: 0;
+    top: 20px;
+    left: 10px;
     z-index: 2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added drop shadow */
+    font-size: 16px
 }
 
 .menu-list li {
-    margin: 0;
+    margin: 5px;
 }
 
 .menu-list li a {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 15px;
 }
 
 .menu-list li a:hover {
@@ -112,7 +123,6 @@ body {
     color: #ffc229; /* Added line to change text color on hover */
 }
 
-
 .center-top-text {
     display: none; /* Hide the center-top-text class */
 }
@@ -143,6 +153,22 @@ body {
     border: none;
     border-radius: 10px; /* Added round corners */
     filter: drop-shadow(0 0px 8px rgba(255, 255, 255, 0.555)); /* Added drop shadow */
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 10px;
+    transition: color 0.3s ease; /* Added transition for smooth color change */
+    z-index: 2;
+}
+
+.footer-text:hover {
+    color: #ffc229; /* Change color on hover */
 }
 
 @media (max-width: 600px) {
