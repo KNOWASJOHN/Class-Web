@@ -146,7 +146,7 @@ body {
 .instagram-container {
     display: flex;
     position:absolute;
-    top: 40vh;
+    top: 45vh;
     justify-content: center;
     align-items: center;
     height: 100vh;
