@@ -196,6 +196,7 @@ body {
     color: #ffc229;
     transition: color 0.4s ease; /* Added transition for smooth color change */
     filter: drop-shadow(0 0px 4px #ffc22970); /* Added drop shadow */
+    user-select: none;
 }
 .welcome-text {
     display: flex;
