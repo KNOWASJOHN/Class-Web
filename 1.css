@@ -145,8 +145,8 @@ body {
 
 .instagram-container {
     display: flex;
-    position:absolute;
-    top: 50vh;
+    position: relative;
+    padding-top: 3px; /* Add padding to avoid overlap */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -206,7 +206,7 @@ body {
     width: 100%; /* Set fixed width */
     max-width: 800px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
-    height: 100vh; /* Full viewport height */
+    padding-bottom: 5px; /* Add padding to avoid overlap */
     text-align: center;
     color: white;
     font-family: 'Silkscreen', Arial, sans-serif;
