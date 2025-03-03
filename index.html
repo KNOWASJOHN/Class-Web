@@ -31,6 +31,10 @@
         <a href="#Github">GitHub</a>
         <a href="#Contact">Contact</a>
     </div>
+    <div class="welcome-text" style="text-align: center;">
+        <h1>Welcome to <div class="welcome-data">Data Tharavaad!</div></h1>
+        <p>We are the 2024 Data Science students from Christ College of Engineering, Irijalakuda. Passionate about exploring the world of data, we’re committed to learning, innovating, and shaping the future of technology through data science. Join us on our exciting journey!</p>
+    </div>
     <div class="instagram-container">
         <iframe src="https://www.instagram.com/johnantony_was.taken/embed" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
@@ -39,5 +43,11 @@
         © DATA THARAVAAD 
     </div>
     <script src="menu.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.welcome-text').classList.add('loaded');
+            document.querySelector('.instagram-container').classList.add('loaded');
+        });
+    </script>
 </body>
 </html>

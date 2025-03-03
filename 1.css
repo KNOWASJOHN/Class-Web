@@ -30,12 +30,14 @@ body {
 }
 
 .menu {
-    position: absolute;
+    position: fixed; /* Make menu fixed */
     top: 23px;
     left: 10px;
+    z-index: 3; /* Ensure it is above other elements */
 }
 
 .menu-button {
+
     background-color: transparent;
     border: none;
     color: #ffffff; /* Changed color of menu button */
@@ -62,7 +64,15 @@ body {
     left: 10px;
     z-index: 2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added drop shadow */
-    font-size: 16px
+    font-size: 16px;
+    backdrop-filter: blur(5px); /* Added blur effect */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Smooth fade-in transition */
+}
+
+.menu-list.active {
+    display: block; /* Show menu list when active */
+    opacity: 1; /* Fully visible */
 }
 
 .menu-list li {
@@ -84,13 +94,12 @@ body {
 
 .overlay {
     display: none;
-    position: fixed;
+    position: fixed; /* Ensure the overlay covers the entire viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
     z-index: 1;
     transition: backdrop-filter 0.3s ease; /* Added smooth blur animation */
 }
@@ -136,10 +145,21 @@ body {
 
 .instagram-container {
     display: flex;
+    position:absolute;
+    top: 40vh;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
+    margin-top: 20px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    transition: opacity 2s ease, transform 1s ease; /* Smooth transition */
+}
+
+.instagram-container.loaded {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
 }
 
 .instagram-container iframe {
@@ -153,21 +173,62 @@ body {
 }
 
 .footer-text {
-    position: fixed;
-    bottom: 5px;
+    position: fixed; /* Make footer fixed */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
     width: 100%;
     text-align: center;
     font-family: 'Silkscreen', Arial, sans-serif;
     color: rgba(255, 255, 255, 0.863);
     font-size: 13px;
     transition: color 0.3s ease; /* Added transition for smooth color change */
-    z-index: 2;
+    z-index: 0;
     filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.384)); /* Added drop shadow */
+    user-select: none; /* Make text unselectable */
 }
 
 .footer-text:hover {
     color: #ffc229; /* Change color on hover */
-    filter: drop-shadow(0 0px 4px rgba(255, 194, 41, 0.452)); /* Added drop shadow */
+    filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.452)); /* Added drop shadow */
+}
+.welcome-data:hover{
+    color: #ffc229;
+    transition: color 0.4s ease; /* Added transition for smooth color change */
+    filter: drop-shadow(0 0px 4px #ffc22970); /* Added drop shadow */
+}
+.welcome-text {
+    display: flex;
+    position: relative;
+    top: 20vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Set fixed width */
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    color: white;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    transition: opacity 2s ease, transform 1s ease; /* Smooth transition */
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+}
+
+.welcome-text.loaded {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+}
+
+.welcome-text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 @media (max-width: 600px) {

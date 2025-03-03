@@ -1,18 +1,30 @@
-document.querySelector('.menu-button').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.menu-button');
     const menuList = document.querySelector('.menu-list');
     const overlay = document.querySelector('.overlay');
-    if (menuList.style.display === 'block') {
-        menuList.style.display = 'none';
-        overlay.classList.remove('active');
-    } else {
-        menuList.style.display = 'block';
-        overlay.classList.add('active');
-    }
-});
+    const instagramContainer = document.querySelector('.instagram-container');
 
-document.querySelector('.overlay').addEventListener('click', function() {
-    document.querySelector('.menu-list').style.display = 'none';
-    document.querySelector('.overlay').classList.remove('active');
+    menuButton.addEventListener('click', () => {
+        menuList.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+        menuList.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                instagramContainer.classList.add('visible');
+            } else {
+                instagramContainer.classList.remove('visible');
+            }
+        });
+    });
+
+    observer.observe(instagramContainer);
 });
 
 document.addEventListener('touchstart', handleTouchStart, false);
@@ -35,7 +47,7 @@ function handleTouchMove(evt) {
 
     if (xDiff > 0) {
         // Swiped left
-        document.querySelector('.menu-list').style.display = 'none';
+        document.querySelector('.menu-list').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
     }
 
