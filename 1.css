@@ -8,7 +8,7 @@ body {
 }
 
 #background-video {
-    position: fixed;
+    position: fixed; /* Ensure the video is fixed */
     right: 50%;
     bottom: 50%;
     min-width: 100%;
@@ -16,12 +16,11 @@ body {
     z-index: -1;
     width: auto;
     height: auto;
-    object-fit: cover; /* Added to ensure video covers the screen */
-    transform: translate(50%, 50%); /* Added to center the video */
-    /* Added to resize the background with resolution */
+    object-fit: cover; /* Ensure video covers the screen */
+    transform: translate(50%, 50%); /* Center the video */
     width: 100vw;
     height: 100vh;
-    opacity: 0.3; /* Added to change the opacity of the background video */
+    opacity: 0.3; /* Change the opacity of the background video */
     filter: blur(1px);
     width: 100%;
     height: auto;
@@ -213,7 +212,6 @@ body {
     opacity: 0; /* Start hidden */
     transform: scale(0.9); /* Start slightly smaller */
     transition: opacity 2s ease, transform 1s ease; /* Smooth transition */
-    user-select: none;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
 }
 
@@ -252,6 +250,7 @@ body {
         bottom: 50%;
         transform: translate(50%, 50%);
         width: 100%;
+        filter: blur(1px);
         height: auto;
     }
 
