@@ -18,7 +18,7 @@ body {
     filter: blur(0.8px);
     width: 100%;
     height: 100%;
-    transition: width 0.5s ease, height 0.5s ease; /* Smooth transition */
+
 }
 
 .menu {
@@ -225,6 +225,31 @@ body {
     line-height: 1.5;
 }
 
+.tutors-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Ensure the image is on the left */
+    text-align: left;
+    color: white;
+    font-family: 'Silkscreen', Arial, sans-serif;
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 5px;
+}
+
+.tutors-section p {
+    flex: 1;
+    margin-left: 10px; /* Adjust margin to the left */
+}
+
+.tutors-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.555)); /* Added drop shadow */
+}
+
 @media (max-width: 600px) {
     .center-top-logo {
         max-width: 70px; /* Adjust size for smaller screens */
@@ -232,6 +257,19 @@ body {
     .instagram-container iframe {
         width: 90%; /* Make iframe width responsive */
         height:50%; /* Make iframe height responsive */
+    }
+    .tutors-section {
+        flex-direction: column; /* Stack vertically on small screens */
+        text-align: center;
+    }
+
+    .tutors-section p {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add top margin */
+    }
+
+    .tutors-image {
+        max-width: 80%; /* Make image responsive */
     }
 }
 
