@@ -236,11 +236,19 @@ body {
     margin: 10px auto;
     max-width: 800px;
     padding: 5px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    transition: opacity 2s ease, transform 1s ease; /* Smooth transition */
+}
+
+.tutors-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
 }
 
 .tutors-section p {
     flex: 1;
-    margin-left: 10px; /* Adjust margin to the left */
+    margin-left: 5px; /* Adjust margin to the left */
 }
 
 .tutors-image {
@@ -265,7 +273,8 @@ body {
 
     .tutors-section p {
         margin-left: 0; /* Remove left margin */
-        margin-top: 10px; /* Add top margin */
+        margin-top: 4px; /* Add top margin */
+        font-size: 12px; /* Adjust font size */
     }
 
     .tutors-image {
@@ -274,8 +283,6 @@ body {
 }
 
 @media (max-width: 900px) {
-
-
     .top-right-links {
         position: absolute;
         top: 8px;

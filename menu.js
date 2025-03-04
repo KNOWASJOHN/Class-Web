@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuList = document.querySelector('.menu-list');
     const overlay = document.querySelector('.overlay');
     const instagramContainer = document.querySelector('.instagram-container');
+    const tutorsSection = document.querySelector('.tutors-section');
 
     menuButton.addEventListener('click', () => {
         menuList.classList.toggle('active');
@@ -18,13 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 instagramContainer.classList.add('visible');
+                tutorsSection.classList.add('visible');
             } else {
                 instagramContainer.classList.remove('visible');
+                tutorsSection.classList.remove('visible');
             }
         });
     });
 
     observer.observe(instagramContainer);
+    observer.observe(tutorsSection);
 });
 
 document.addEventListener('touchstart', handleTouchStart, false);
