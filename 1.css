@@ -2,6 +2,7 @@
 
 body {
     background-color: #232323;
+
     margin: 0;
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 23px; /* Added line to increase font size */
@@ -9,6 +10,7 @@ body {
 
 #background-video {
     position: fixed; /* Ensure the video is fixed */
+    background-image: url('1.gif'); /* Added background image */
     right: 50%;
     bottom: 50%;
     z-index: -1;
@@ -138,7 +140,7 @@ body {
 .instagram-container {
     display: flex;
     position: relative;
-    padding-top: 3px; /* Add padding to avoid overlap */
+    padding: 3px; /* Add padding to avoid overlap */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -169,8 +171,7 @@ body {
     filter: drop-shadow(0 0px 6px #ffc2299f); /* Added drop shadow effect */
 }
 .footer-text {
-    position: relative; /* Make footer fixed */
-    margin-top: 10px; /* Add margin to the top */
+    position: -webkit-sticky; /* Make footer fixed */
     bottom: 0; /* Position at the bottom */
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
@@ -180,7 +181,7 @@ body {
     color: rgba(255, 255, 255, 0.863);
     font-size: 13px;
     transition: color 0.3s ease; /* Added transition for smooth color change */
-    z-index: 0;
+    z-index: 3; /* Ensure it is above other elements */
     filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.384)); /* Added drop shadow */
     user-select: none; /* Make text unselectable */
     
@@ -242,6 +243,8 @@ body {
 }
 
 .tutors-section {
+    position: relative;
+    bottom: 8vh;
     transform: scale(0.6); /* Start slightly smaller */
     transition: opacity 2s ease-in, transform 2s ease-in; /* Smooth transition */
     display: flex;
@@ -253,9 +256,7 @@ body {
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: large;
     margin: 10px auto;
-    padding: 5px;
     max-width: 1000px;
-    padding: 5px;
     opacity: 0; /* Start hidden */
 }
 
@@ -271,14 +272,14 @@ body {
 
 .tutors-image {
     transition: transform 0.5s ease-out;
-    max-width: 200px;
+    max-width: 30%;
     position: relative;
     height: auto;
     border-radius: 10px;
     filter: drop-shadow(0 1px 6px #000000); /* Added drop shadow */
 }
 .tutors-image:hover{
-    transition: transform 0.3s ease-in;
+    transition: transform 0.6s ease;
     transform: scale(1.1);
 
 }
