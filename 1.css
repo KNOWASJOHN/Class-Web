@@ -241,6 +241,8 @@ body {
 }
 
 .tutors-section {
+    transform: scale(0.6); /* Start slightly smaller */
+    transition: opacity 2s ease-in, transform 2s ease-in; /* Smooth transition */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,11 +256,9 @@ body {
     max-width: 1000px;
     padding: 5px;
     opacity: 0; /* Start hidden */
-    transform: scale(0.6); /* Start slightly smaller */
-    transition: opacity 2s ease-in, transform 2s ease; /* Smooth transition */
 }
 
-.tutors-section.visible {
+.tutors-section.loaded {
     opacity: 1; /* Fully visible */
     transform: scale(1); /* Normal size */
 }
@@ -291,6 +291,8 @@ body {
         height:50%; /* Make iframe height responsive */
     }
     .tutors-section {
+        transform: scale(0.6); /* Start slightly smaller */
+        transition: opacity 2s ease-in, transform 2s ease-in; /* Smooth transition */
         flex-direction: column; /* Stack vertically on small screens */
         text-align: center;
         margin-top: 1px; /* Move closer to Instagram iframe */
