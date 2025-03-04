@@ -141,7 +141,7 @@ body {
     padding-top: 3px; /* Add padding to avoid overlap */
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 100vh;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -255,7 +255,7 @@ body {
     padding: 5px;
     opacity: 0; /* Start hidden */
     transform: scale(0.6); /* Start slightly smaller */
-    transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+    transition: opacity 2s ease-in, transform 2s ease; /* Smooth transition */
 }
 
 .tutors-section.visible {
@@ -269,11 +269,17 @@ body {
 }
 
 .tutors-image {
+    transition: transform 0.5s ease-out;
     max-width: 300px;
     position: relative;
     height: auto;
     border-radius: 10px;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.555)); /* Added drop shadow */
+}
+.tutors-image:hover{
+    transition: transform 1s ease-in;
+    transform: scale(1.1);
+
 }
 
 @media (max-width: 600px) {
@@ -293,7 +299,7 @@ body {
     .tutors-section p {
         margin-left: 0; /* Remove left margin */
         margin-top: 1px; /* Add top margin */
-        font-size: 14px; /* Adjust font size */
+        font-size: 15px; /* Adjust font size */
     }
 
     .tutors-image {
