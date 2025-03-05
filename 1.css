@@ -352,15 +352,12 @@ body {
     }
 
     .footer-text-copyright {
-        border: 3px solid #ff0000;
         flex-direction: column; /* Stack vertically on small screens */
     }
     .footer-text .cpy {
-        border: 1px solid tomato;
         padding-left: 25px;    }
 
     .footer-text .email {
-        border: 3px solid #ff0000;
         margin-top: 5px; /* Add margin to separate email from copyright */
     }
 }
