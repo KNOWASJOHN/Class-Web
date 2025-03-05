@@ -2,12 +2,18 @@
 
 body {
     background-color: #232323;
-
+    overflow-x: hidden;
     margin: 0;
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 23px; /* Added line to increase font size */
 }
+.bx-envelope{
+    margin-top: 2px;
+    margin-right: 2px;
+    gap: 2px;
+    margin-left: 20px;
 
+}
 #background-video {
     position: fixed; /* Ensure the video is fixed */
     background-image: url('1.gif'); /* Added background image */
@@ -20,7 +26,16 @@ body {
     filter: blur(0.3px);
     min-width: 100%;
     min-height: 100%;
+}
 
+#background-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transform: translate(-100%, -100%);
 }
 
 .menu {
@@ -166,12 +181,35 @@ body {
     border-radius: 10px; /* Added round corners */
     filter: drop-shadow(0 0px 8px rgba(255, 255, 255, 0.555)); /* Added drop shadow */
 }
-.footer-text:hover{
+.footer-text .cpy:hover {
     color: #ffc229; /* Change color on hover */
-    filter: drop-shadow(0 0px 6px #ffc2299f); /* Added drop shadow effect */
+    filter: drop-shadow(0 0px 2px #ffc2299f); /* Added drop shadow effect */
+    transition: 0.5s ease; /* Added transition for smooth color change */
 }
+
+.footer-text .email:hover {
+    color: #ffc229; /* Change color on hover */
+    filter: drop-shadow(0 0px 2px #ffc2299f); /* Added drop shadow effect */
+    transition: 0.5s ease; /* Added transition for smooth color change */
+}
+
+.footer-text-email {
+    color: white;
+    position: relative;
+    filter: drop-shadow(0 0px 4px rgba(255, 255, 255, 0.555)); /* Added drop shadow */
+}
+
+.footer-text-copyright {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .footer-text {
-    position: -webkit-sticky; /* Make footer fixed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     bottom: 0; /* Position at the bottom */
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
@@ -182,9 +220,7 @@ body {
     font-size: 13px;
     transition: color 0.3s ease; /* Added transition for smooth color change */
     z-index: 3; /* Ensure it is above other elements */
-    filter: drop-shadow(0 0px 6px rgba(255, 255, 255, 0.384)); /* Added drop shadow */
     user-select: none; /* Make text unselectable */
-    
 }
 
 .welcome-data{
@@ -309,6 +345,24 @@ body {
     .tutors-image {
         max-width: 80%; /* Make image responsive */
     }
+
+    .footer-text {
+        flex-direction: column; /* Stack vertically on small screens */
+        font-size: 11px; /* Adjust font size for smaller screens */
+    }
+
+    .footer-text-copyright {
+        border: 3px solid #ff0000;
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    .footer-text .cpy {
+        border: 1px solid tomato;
+        padding-left: 25px;    }
+
+    .footer-text .email {
+        border: 3px solid #ff0000;
+        margin-top: 5px; /* Add margin to separate email from copyright */
+    }
 }
 
 @media (max-width: 900px) {
@@ -327,13 +381,18 @@ body {
 }
 
 @media (max-height: 600px) {
-    #background-video {
-        width: 100vw; /* Fixed width */
-        height: 100vh; /* Fixed height */
+    #background-video { 
+        position: fixed; /* Ensure the video is fixed */
+        background-image: url('1.gif'); /* Added background image */
         right: 50%;
         bottom: 50%;
-        transform: translate(50%, 50%);
+        z-index: -1;
         object-fit: cover; /* Ensure video covers the screen */
+        transform: translate(50%, 50%); /* Center the video */
+        opacity: 0.1; /* Change the opacity of the background video */
+        filter: blur(0.3px);
+        min-width: 100%;
+        min-height: 100%;
     }
     .instagram-container iframe {
         width: 90%; /* Make iframe width responsive */
