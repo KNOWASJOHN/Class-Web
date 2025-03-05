@@ -8,9 +8,9 @@ body {
     font-size: 23px; /* Added line to increase font size */
 }
 .bx-envelope{
-    margin-top: 2px;
+    position: relative;
     margin-right: 2px;
-    gap: 2px;
+    top: 2.1px;
     margin-left: 20px;
 
 }
