@@ -283,7 +283,7 @@ body {
     bottom: 8vh;
     animation: appear linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 42%;
+        animation-range: entry 0% cover 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,11 +399,45 @@ body {
 
   @keyframes appear {
     from {
+      scale: 0;
       opacity: 0;
-      clip-path: inset(0% 100% 0% 100%);
     }
     to {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
+        scale: 1;
+        opacity: 1;
+    }
+  }
+
+  .stock-ticker{
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    background-color: #ffc229;
+    --gap:3rem;
+    gap:var(--gap)
+  }
+  .stock-ticker ul{
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    gap: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+  }
+  .stock-ticker ul li{
+    font-size: 25px;
+    color: #232323;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .stock-ticker ul li:hover{
+    color: #ffffff;
+  }
+  @keyframes scroll{
+    to{
+        transform: translateX(calc(-100% - 3rem));
     }
   }
