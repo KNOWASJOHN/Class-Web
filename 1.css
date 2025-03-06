@@ -419,6 +419,14 @@ body {
     --gap:50px;
     gap:var(--gap)
   }
+  .stock-ticker ul img{
+    position: relative;
+    top:3px;
+    filter: invert(0.85);
+  }
+  .stock-ticker ul img:hover{
+    filter: invert(0);
+  }
   .stock-ticker ul{
     list-style: none;
     flex-shrink: 0;
@@ -427,7 +435,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: scroll 20s linear infinite;
+    animation: scroll 15s linear infinite;
   }
   .stock-ticker ul li{
     font-size: 25px;
