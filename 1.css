@@ -293,13 +293,9 @@ body {
     font-size: 18px;
     margin:auto;
     max-width: 1000px;
-    opacity: 0; /* Start hidden */
+    opacity: 1; /* Start hidden */
 }
 
-.tutors-section.visible {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* Normal size */
-}
 
 .tutors-section .h5 {
     flex: 1;
