@@ -7,12 +7,37 @@
     <title>DATA THARAVAAD </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' async>
     <link rel="icon" type="image/x-icon" href="L.png">
+    <link rel="preload" href="1.css">
+    <link rel="stylesheet" href="2.css">
+    <link rel="preload" href="menu.js">
     <link rel="stylesheet" href="1.css">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400&display=swap" rel="stylesheet" async>
 
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+          </div>
+            </div>
+<script>
+    window.addEventListener('load', () => {
+        document.querySelector('.preloader').classList.add('loader--hidden');
+
+        document.querySelector('.preloader').addEventListener('transitionend', () => {
+            document.body.removeChild(document.querySelector('.preloader')); 
+        });
+    });
+
+</script>
+    
+
     <div id="background-video">
         <video autoplay muted loop>
             <source src="" type="video/mp4">

@@ -7,6 +7,14 @@ body {
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 23px; /* Added line to increase font size */
 }
+
+#preloader{
+        background: #000000;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+}
 .bx-envelope{
     position: relative;
     margin-right: 2px;
@@ -164,7 +172,7 @@ body {
     margin-bottom: 0px;
     opacity: 0; /* Start hidden */
     transform: scale(0.3); /* Start slightly smaller */
-    transition: opacity 0.6s ease, transform 0.8s ease; /* Smooth transition */
+    transition: opacity 1.2s ease, transform 1.4s ease; /* Smooth transition */
 }
 
 .instagram-container.loaded {
@@ -257,7 +265,7 @@ body {
     font-family: 'Silkscreen', Arial, sans-serif;
     opacity: 0; /* Start hidden */
     transform: scale(0.3); /* Start slightly smaller */
-    transition: opacity 0.6s ease, transform 0.8s ease; /* Smooth transition */
+    transition: opacity 1.2s ease, transform 1.4s ease; /* Smooth transition */
 filter: drop-shadow(0 1px 3px rgb(0, 0, 0));
     filter: drop-shadow(0 1px 3px rgb(0, 0, 0));
     user-select: none;
@@ -452,3 +460,4 @@ filter: drop-shadow(0 1px 3px rgb(0, 0, 0));
         transform: translateX(calc(-100% - var(--gap)));
     }
   }
+  
