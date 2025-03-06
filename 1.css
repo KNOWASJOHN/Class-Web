@@ -300,6 +300,7 @@ filter: drop-shadow(0 1px 3px rgb(0, 0, 0));
 .tutors-section .h5 {
     flex: 1;
     margin-left: 0px; /* Adjust margin to the left */
+    user-select: none; /* Make text unselectable */
 }
 
 .tutors-image {
