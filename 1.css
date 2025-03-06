@@ -2,7 +2,7 @@
 
 body {
     background-color: #232323;
-    overflow-x: hidden;
+    overflow-x:hidden;
     margin: 0;
     font-family: 'Silkscreen', Arial, sans-serif;
     font-size: 23px; /* Added line to increase font size */
@@ -279,8 +279,7 @@ body {
 }
 
 .tutors-section {
-    position: relative;
-    bottom: 8vh;
+    
     animation: appear linear;
         animation-timeline: view();
         animation-range: entry 0% cover 40%;
@@ -291,8 +290,8 @@ body {
     text-align: left;
     color: white;
     font-family: 'Silkscreen', Arial, sans-serif;
-    font-size: large;
-    margin: 10px auto;
+    font-size: 18px;
+    margin:auto;
     max-width: 1000px;
     opacity: 0; /* Start hidden */
 }
@@ -308,7 +307,8 @@ body {
 }
 
 .tutors-image {
-    transition: transform 0.5s ease-out;
+    transition: transform 0.6s ease;
+    margin-top: 20px;
     max-width: 30%;
     position: relative;
     border-radius: 10px;
@@ -410,11 +410,13 @@ body {
 
   .stock-ticker{
     padding-block: 8px;
+    position: relative;
+    top: -50px;
     overflow: hidden;
     user-select: none;
     display: flex;
     background-color: #ffc229;
-    --gap:3rem;
+    --gap:50px;
     gap:var(--gap)
   }
   .stock-ticker ul{
@@ -425,7 +427,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
   }
   .stock-ticker ul li{
     font-size: 25px;
@@ -438,6 +440,6 @@ body {
   }
   @keyframes scroll{
     to{
-        transform: translateX(calc(-100% - 3rem));
+        transform: translateX(calc(-100% - var(--gap)));
     }
   }
