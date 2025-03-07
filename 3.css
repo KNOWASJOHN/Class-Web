@@ -67,19 +67,19 @@
   border: 1px solid gray;
 }
 .wrap-effect-3 .item:first-of-type {
-  background-image: url("https://github.com/someonexunknown/gallery/blob/main/IMG-20250306-WA0041.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/1.webp");
 }
 .wrap-effect-3 .item:nth-of-type(2) {
-  background-image: url("https://github.com/someonexunknown/gallery/blob/main/IMG-20250306-WA0014.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/0.webp");
 }
 .wrap-effect-3 .item:nth-of-type(3) {
-  background-image: url("https://github.com/someonexunknown/gallery/blob/main/IMG-20250306-WA0019.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/3.webp");
 }
 .wrap-effect-3 .item:nth-of-type(4) {
-  background-image: url("https://github.com/someonexunknown/gallery/blob/main/IMG-20250306-WA0015.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/2.webp");
 }
 .wrap-effect-3 .item:last-of-type {
-  background-image: url("https://github.com/someonexunknown/gallery/blob/main/IMG-20250306-WA0023.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/4.webp");
 }
 @keyframes rotate {
   0% {
