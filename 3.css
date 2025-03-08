@@ -120,13 +120,13 @@
     padding-block: 0px;
     position: relative;
     /* border: 2px solid #ffffff; */
-    height: 280px;
+    height: 350px;
     top: 20vh;
     overflow: hidden;
     user-select: none;
     display: flex;
     --gap:50px;
-    gap:var(--gap)
+    gap:var(--gap);
   
   }
   .gallery ul img{
@@ -138,10 +138,11 @@
     max-width: 60vw;
     filter: drop-shadow(0 1px 4px #000);
   }
+
   .gallery ul img:hover{
-    animation: rotate 1s ease-in-out both;
-      
+    animation: rotate 1s ease-in-out both;  
   }
+
   .gallery ul{
     animation: slide 25s linear infinite;
     list-style: none;
