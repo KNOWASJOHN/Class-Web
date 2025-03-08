@@ -51,7 +51,7 @@
     flex: 30;
 }
 .wrap-effect-3 .item:hover {
-    animation: rotate 1s ease-in-out both;
+    animation: rotate1 1s ease-in-out both;
     border-radius: 20px;
 }
 .wrap-effect-3 .item:first-of-type {
@@ -69,7 +69,7 @@
 .wrap-effect-3 .item:last-of-type {
     background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/4.webp");
 }
-@keyframes rotate {
+@keyframes rotate1 {
     0% {
         transform: rotate(0deg);
     }
@@ -139,8 +139,6 @@
     filter: drop-shadow(0 1px 4px #000);
   }
   .gallery ul img:hover{
-    transition: transform 0.6s ease;
-    transform: scale(1.1);  
     animation: rotate 1s ease-in-out both;
       
   }
