@@ -39,13 +39,15 @@
   .container-general .gallery-wrap {
     /* border: 5px solid #ffc229 ; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    height: 90vh;
+    height: 50vh;
+    width: 90%;
+    border-radius: 10px;
   }
-  .container-general .gallery-wrap .item{
-    height: 80%;
-  }
+    .wrap-effect-3 .item:hover {
+      animation: rotate 5s ease-in-out;
+    }
 }
 
 .container-general .gallery-wrap .item{
@@ -58,13 +60,12 @@
   transition: all 1s ease;
 }
 .container-general .gallery-wrap .item:hover {
-  flex: 7;
+  flex: 50;
 }
 
 .wrap-effect-3 .item:hover {
-  animation: rotate 0.7s ease-in-out both;
-  border-radius: 10px;
-  border: 1px solid gray;
+  animation: rotate 1s ease-in-out both;
+  border-radius: 20px;
 }
 .wrap-effect-3 .item:first-of-type {
   background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/1.webp");
@@ -81,20 +82,21 @@
 .wrap-effect-3 .item:last-of-type {
   background-image: url("https://raw.githubusercontent.com/someonexunknown/pics/refs/heads/main/4.webp");
 }
+
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg)
   }
   25% {
-    transform: rotate(10deg) translate3d(0, 0, 0);
+    transform: rotate(10deg)
   }
   50% {
-    transform: rotate(-10deg) translate3d(0, 0, 0);
+    transform: rotate(-10deg)
   }
   75% {
-    transform: rotate(5deg) translate3d(0, 0, 0);
+    transform: rotate(5deg)
   }
   100% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg)
   }
 }
