@@ -26,6 +26,7 @@ body {
 #background-video {
     position: fixed;
     background-image: url('htps://github.com/someonexunknown/pics/blob/main/bg.gif?raw=true');
+    background-attachment: fixed;
     right: 50%;
     bottom: 50%;
     z-index: -1;
@@ -169,7 +170,7 @@ body {
     padding: 3px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -184,9 +185,10 @@ body {
 }
 
 .instagram-container iframe {
+    border: 3px solid #ff0000;
     width: 50%;
-    height: 60%;
-    max-width: 600px;
+    height: 70%;
+    max-width: 500px;
     max-height: 600px;
     border: none;
     border-radius: 10px;
