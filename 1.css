@@ -25,7 +25,7 @@ body {
 
 #background-video {
     position: fixed;
-    background-image: url('https://github.com/someonexunknown/pics/blob/main/bg.gif?raw=true');
+    background-image: url('bg.gif');
     background-attachment: fixed;
     right: 50%;
     bottom: 50%;
